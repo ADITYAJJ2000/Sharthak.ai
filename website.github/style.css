@@ -1,0 +1,247 @@
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Chatbox Section */
+.chat-section {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 300px;
+  height: 60vh;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  overflow-y: auto;
+  height: 90%;
+}
+
+.user-msg {
+  background-color: #DCF8C6;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.ai-msg {
+  background-color: #E6F7FF;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.chat-input-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-input-area input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.chat-input-area button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input-area button:hover {
+  background-color: #0056b3;
+}
+
+/* Navigation bar styles */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px; /* Increased padding */
+  background: transparent;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #D9D9D9; /* Light Gray for "ASTRION" */
+  margin-left: 20px;
+}
+
+.big-x {
+  font-size: 1.5em; /* Adjust size of 𝕏 as needed */
+  color: #66FCF1; /* Cyan for the base color */
+  position: relative; /* For the holographic effect */
+  margin-left: 5px; /* Space between "ASTRION" and "𝕏" */
+  text-shadow: 
+    0 0 5px red,   /* Holographic effect */
+    0 0 10px red, 
+    0 0 15px red,
+    0 0 20px red,
+    0 0 25px red; /* Increases the glow effect */
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the navigation links */
+  flex-grow: 1; /* Allow nav to grow to occupy space */
+}
+
+.navbar-nav a {
+  color: #66FCF1; /* Cyan color on hover */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-nav a:hover {
+  color: #0e1c4f; /* Dark Blue */
+}
+
+.navbar-button {
+  background-color: #620eff; /* Dark Blue background for button */
+  color: #fff;
+  padding: 15px 40px; /* Increased padding for larger button */
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 150px; /* Minimum width to ensure visibility */
+  text-align: center; /* Center button text */
+  margin-right: 20px; /* Increased margin for better visibility */
+  margin-top: 20px; /* Increased margin-top to move the button down */
+}
+
+.navbar-button:hover {
+  background-color: #66FCF1; /* Cyan background on hover */
+}
+
+/* Section Styles */
+.black-top {
+  height: 20vh; /* Height of 20vh */
+  background-color: black; /* Black color */
+}
+
+.top-section {
+  height: calc(100vh - 20vh); /* Adjust height considering black top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3efe8; /* Light color */
+  position: relative; /* Relative positioning for absolute children */
+}
+
+.black-bottom {
+  height: 100vh; /* Height of 100vh */
+  background-color: black; /* Black color */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: relative;
+}
+
+.bottom-section {
+  height: 100vh; /* Keep the bottom section at full height */
+  background-color: #faecc3; /* Light yellow color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #336659; /* Dark teal color for text */
+}
+
+/* Text overlay styles */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-10%); /* Adjust translateX to move left */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none; /* Prevents interaction with the text */
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  color: #66FCF1; /* Cyan */
+  text-align: center;
+}
+
+/* Shared styles for subtitles */
+.subtitle, .second-subtitle {
+  font-size: 1.5em;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 10px;
+  color: #FFA2B6; /* Light Pink */
+  opacity: 0; /* Hidden initially */
+}
+
+/* Animation to fade in the first subtitle */
+.subtitle {
+  animation: fade-in 2s forwards; /* Simple fade-in effect */
+}
+
+/* Second subtitle appears after the first */
+.second-subtitle {
+  animation: fade-in 2s forwards;
+  animation-delay: 2s; /* Delay for second subtitle to appear after the first */
+}
+
+.adi {
+  font-size: 1.5em;
+  color: #72383D; /* Brighter color for "Adi" */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* New styles for the AI bot text */
+.ai-bot-text {
+  position: absolute;
+  left: 20px; /* Positioning from the left */
+  top: 30%; /* Adjust top positioning to move it lower */
+  font-size: 3em; /* Font size for the text */
+  font-weight: bold; /* Make text bold */
+  color: black; /* Text color set to black */
+  max-width: 300px; /* Maximum width for text */
+  z-index: 10; /* Ensure it's on top */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Transition for opacity change */
+  animation: fade-in 2s forwards; /* Fade-in animation */
+  animation-delay: 1s; /* Delay for the AI text to appear */
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

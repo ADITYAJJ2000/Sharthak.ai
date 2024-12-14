@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation bar styles */
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      background: transparent;
+      z-index: 1000;
+    }
+
+    .navbar-logo {
+      font-size: 2em;
+      font-weight: bold;
+      color: #D9D9D9;
+      margin-left: 20px;
+    }
+
+    .big-ai {
+      font-size: 1.5em;
+      color: #66FCF1;
+      position: relative;
+      margin-left: 5px;
+      text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red, 0 0 25px red;
+    }
+
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .navbar-nav a {
+      color: #66FCF1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar-nav a:hover {
+      color: #0e1c4f;
+    }
+
+    .navbar-button {
+      background-color: #620eff;
+      color: #fff;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      min-width: 150px;
+      text-align: center;
+      margin-right: 20px;
+      margin-top: 25px;
+    }
+
+    .navbar-button:hover {
+      background-color: #66FCF1;
+    }
+
+    /* Section Styles */
+    .black-top {
+      height: 20vh;
+      background-color: black;
+    }
+
+    .top-section {
+      height: calc(100vh - 20vh);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f3efe8;
+      position: relative;
+    }
+
+    .black-bottom {
+      height: 152vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .bottom-section {
+      height: 100vh;
+      background-color: #faecc3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #336659;
+    }
+
+    /* Text overlay styles */
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) translateY(-10%);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      pointer-events: none;
+    }
+
+    .title {
+      font-size: 3em;
+      font-weight: bold;
+      color: #66FCF1;
+      text-align: center;
+    }
+
+    .subtitle, .second-subtitle {
+      font-size: 1.5em;
+      font-weight: normal;
+      text-align: center;
+      margin-top: 10px;
+      color: #FFA2B6;
+      opacity: 0;
+    }
+
+    .subtitle {
+      animation: fade-in 2s forwards;
+    }
+
+    .second-subtitle {
+      animation: fade-in 2s forwards;
+      animation-delay: 2s;
+    }
+
+    .adi {
+      font-size: 1.5em;
+      color: #72383D;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .ai-bot-text {
+      position: absolute;
+      left: 20px;
+      top: 30%;
+      font-size: 3em;
+      font-weight: bold;
+      color: black;
+      max-width: 300px;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      animation: fade-in 2s forwards;
+      animation-delay: 1s;
+    }
+
+    /* Keyframe for fade-in effect */
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="navbar-logo">SHANVIKA<span class="big-ai">AI</span></div>
+    <div class="navbar-nav">
+      <a href="#">Features</a>
+      <a href="#">Use Cases</a>
+      <a href="#">Resources</a>
+      <a href="#">Pricing</a>
+    </div>
+    <div class="navbar-button">Get in Touch</div>
+  </div>
+
+  <!-- Top Section -->
+  <section class="black-top">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.30/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/tkIdtTbYlN4PKn7E/scene.splinecode" style="width: 100%; height: 100%;"></spline-viewer>
+  </section>
+
+  <!-- Section Above the Middle Section (3D Model included) -->
+  <section class="top-section">
+    <div class="ai-bot-text">Hey there! I’m an AI bot Nave. How can I assist you today?</div>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.30/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/GijxWpfaAWp0VxW4/scene.splinecode" style="width: 100%; height: 100%;"></spline-viewer>
+  </section>
+  
+  <section class="black-bottom">
+    <img src="picture.jpeg" alt="Background Image" style="width: 100%; height: auto;">
+    <div class="text-overlay">
+      <div class="title">"Teaching Reinvented."</div>
+      <br>
+      <div class="subtitle" style="color: #4bff96;"> <!-- Original light green -->
+        "One of the greatest benefits of e-learning is the ability to learn at one's own pace – but it requires self-motivation."
+      </div>
+      <div class="quote-author" style="margin-top: 10px; color: #09fff3; font-style: italic; font-size: 1.2em;">— By Bhumi</div> <!-- Night-shade lavender -->
+      <br>
+      <div class="second-subtitle" style="color: #4bff96;"> <!-- Original light green -->
+        "An AI teacher merges innovation with learning, adapting to every student’s style – transforming education into a personalized experience."
+      </div>
+      <div class="quote-author" style="margin-top: 10px; color: #09fff3; font-style: italic; font-size: 1.2em;">— By Aditya</div> <!-- Night-shade lavender -->
+    </div>
+  </section>
+
+  
+  <!-- Bottom Section -->
+  <section class="bottom-section">
+    <h2>Your Bottom Section Content</h2>
+  </section>
+
+  <script>
+    document.getElementById('slow-video').playbackRate = 0.5;
+  </script>
+</body>
+</html>
